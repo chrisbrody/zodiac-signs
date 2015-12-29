@@ -89,12 +89,14 @@ var zodiacSigns = [
 // get results
 function signResults() {
 
-	var userData = document.getElementById('userData'),
+	var displayData = document.getElementById('displayData'), 
+		userData = document.getElementById('userData'),
 		userSign = userData.elements["userSign"].value.toLowerCase(),
 		userGender = userData.elements['gender'].value,
 		userReset = document.getElementById('resetPage')
 
 	// check to make sure the user input matchs a given zodiac sign
+
 	if( userSign != zodiacSigns[0].sign && userSign != zodiacSigns[1].sign && userSign != zodiacSigns[2].sign && userSign != zodiacSigns[3].sign && userSign != zodiacSigns[4].sign && userSign != zodiacSigns[5].sign && userSign != zodiacSigns[6].sign && userSign != zodiacSigns[7].sign && userSign != zodiacSigns[8].sign && userSign != zodiacSigns[9].sign && userSign != zodiacSigns[10].sign && userSign != zodiacSigns[11].sign ) {
 		alert("This didn't match any of our Zodiac Signs, please try again")
 		return
@@ -122,15 +124,20 @@ function signResults() {
 	
 	// hide form from user
 	userData.style.display = 'none'
+	// show results
+	displayData.style.display = 'block'
 	// show reset button
 	userReset.style.display = 'inline-block'
 
 }
+
+// function to stop the user from pressing enter
 function stopEnterKey (e) {
 	var e = (e) ? e : ((event) ? event : null)
 	var node = (e.target) ? e.target : ((e.srcElement) ? e.srcElement : null)
 	if(e.keyCode == 13 && node.type=="text") { return false }
 }
+// on keypress run stopEnterKey function
 document.onkeypress = stopEnterKey
 
 

@@ -5,9 +5,10 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<h1 style="text-align:center">Zodiac Signs</h1>
-
-	<form id="userData" style="text-align:center">
+	<h1 id="zodiac-title">Zodiac Signs</h1>
+	<!-- get user data -->
+	<form id="userData">
+		
 		<h3>What's your Sign?</h3>
 		<input type="text" id="userSign" name="userSign">
 		<h3>What's your Gender</h3>
@@ -16,6 +17,7 @@
 		<br><br>
 		<button type="button" onclick="signResults()">Show My Sign</button>
 	</form>
+	<!-- display the data -->
 	<div id="displayData">
 		<img id="signImg">
 		<h2 id="signName"></h2>
