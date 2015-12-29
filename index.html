@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zodaic Signs</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<h1 style="text-align:center">Zodiac Signs</h1>
+
+	<form id="userData" style="text-align:center">
+		<h3>What's your Sign?</h3>
+		<input type="text" id="userSign" name="userSign">
+		<h3>What's your Gender</h3>
+		<input type="radio" name="gender" value="Male" checked> Male
+		<input type="radio" name="gender" value="Female"> Female
+		<br><br>
+		<button type="button" onclick="signResults()">Show My Sign</button>
+	</form>
+	<div id="displayData">
+		<img id="signImg">
+		<h2 id="signName"></h2>
+		<p id="signInfo"></p>	
+		<button id="resetPage" onclick="location.reload()">Reset</button>	
+	</div>
+
+
+	<script src="js/main.js"></script>
+</body>
+</html>
